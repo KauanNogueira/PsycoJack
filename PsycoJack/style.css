@@ -1,0 +1,136 @@
+:root {
+    --branco-principal: #FFFFFF;
+    --branco-fundo: #efe7e7;
+    --preto-principal: #00030c;
+    --fonte-principal: 'Inter';
+}
+
+* {
+    text-decoration: none;
+    color: var(--branco-principal);
+}
+
+.cabecalho {
+    display: flex;
+    align-items: center;
+    background-color: var(--preto-principal);
+}
+
+.logo-cabecalho {
+    height: 60px;
+    transition: 0.4s;
+}
+
+.logo-cabecalho:hover {
+    transform: scale(1.07);
+}
+
+.lista-elementos-cabecalho {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.elemento-cabecalho a {
+    font-family: var(--fonte-principal);
+    margin: 0 22px;
+    transition: 0.4s;
+}
+
+.elemento-cabecalho a:hover {
+    color: #65687d;
+}
+
+.apresentacao {
+    display: flex;
+    align-items: center;
+    background-color: var(--branco-fundo);
+    height: 300px;
+}
+
+.conteudo-apresentacao {
+    margin: 0 auto;
+    width: 60%;
+    text-align: center;
+
+}
+
+.apresentacao h1 {
+    border-style: solid;
+    margin: 10px 0;
+    font-family: var(--fonte-principal);
+    color: var(--preto-principal);
+    font-weight: 700;
+    font-size: 40px;
+}
+
+.apresentacao p {
+    font-family: var(--fonte-principal);
+    color: var(--preto-principal);
+    font-size: 24px;
+}
+
+.container-preto {
+    display: flex;
+    align-items: center;
+    background-color: var(--preto-principal);
+}
+
+
+.titulo-container-preto {
+    margin: 10px auto;
+    font-weight: 700;
+    font-size: 34px;
+    font-family: var(--fonte-principal);
+
+}
+
+.texto-container-preto {
+    font-family: var(--fonte-principal);
+    font-size: 24px;
+    margin-right: 50px;
+}
+
+.container-branco {
+    display: flex;
+    align-items: center;
+    background-color: var(--branco-fundo);
+}
+
+.titulo-container-branco {
+    text-align: end;
+    margin: 10px auto;
+    font-weight: 700;
+    font-size: 34px;
+    color: var(--preto-principal);
+    font-family: var(--fonte-principal);
+
+
+}
+
+.texto-container-branco {
+    text-align: end;
+    color: var(--preto-principal);
+    font-family: var(--fonte-principal);
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+.rodape {
+    flex-flow: column wrap;
+    background-color: var(--preto-principal);
+}
+
+.logo-rodape {
+    display: block;
+    margin: 0 auto;
+    height: 120px;
+    padding: 10px;
+}
+
+.texto-rodape {
+    text-align: center;
+    font-family: var(--fonte-principal);
+    color: #6b6363;
+    padding: 20px;
+}
