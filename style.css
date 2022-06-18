@@ -3,6 +3,8 @@
     --branco-fundo: #efe7e7;
     --preto-principal: #00030c;
     --fonte-principal: 'Inter';
+    --cinza-secundario: #65687d;
+    --cinza-terciario: #6b6363;
 }
 
 * {
@@ -38,7 +40,7 @@
 }
 
 .elemento-cabecalho a:hover {
-    color: #65687d;
+    color: var(--cinza-secundario);
 }
 
 .apresentacao {
@@ -55,7 +57,7 @@
 
 }
 
-.apresentacao h1 {
+.titulo-apresentacao {
     border-style: solid;
     margin: 10px 0;
     font-family: var(--fonte-principal);
@@ -64,18 +66,25 @@
     font-size: 40px;
 }
 
-.apresentacao p {
+.texto-apresentacao {
     font-family: var(--fonte-principal);
     color: var(--preto-principal);
     font-size: 24px;
 }
 
-.container-preto {
+.container {
+    height: 500px;
     display: flex;
     align-items: center;
+}
+
+.container-preto {
     background-color: var(--preto-principal);
 }
 
+.container-branco {
+    background-color: var(--branco-fundo);
+}
 
 .titulo-container-preto {
     margin: 10px auto;
@@ -89,12 +98,6 @@
     font-family: var(--fonte-principal);
     font-size: 24px;
     margin-right: 50px;
-}
-
-.container-branco {
-    display: flex;
-    align-items: center;
-    background-color: var(--branco-fundo);
 }
 
 .titulo-container-branco {
@@ -131,6 +134,75 @@
 .texto-rodape {
     text-align: center;
     font-family: var(--fonte-principal);
-    color: #6b6363;
+    color: var(--cinza-terciario);
     padding: 20px;
+}
+
+
+@media screen and (max-width: 700px) {
+    .cabecalho {
+        flex-flow: column;
+    }
+
+    .logo-cabecalho {
+        height: 80px;
+    }
+
+    .lista-elementos-cabecalho {
+        margin: 15px auto;
+    }
+
+    .elemento-cabecalho {
+        font-weight: 700;
+        font-size: 18px;
+    }
+
+    .conteudo-apresentacao {
+        width: 90%;
+    }
+
+    .titulo-apresentacao {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .texto-apresentacao {
+        font-size: 20px;
+    }
+
+    .apresentacao {
+        height: 400px;
+    }
+
+    .container {
+        flex-flow: column;
+        justify-content: space-around;
+        height: 650px;
+    }
+
+    .titulo-container-branco,
+    .titulo-container-preto,
+    .texto-container-branco,
+    .texto-container-preto {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .titulo-container-branco,
+    .titulo-container-preto {
+        font-size: 25px;
+    }
+
+    .texto-container-branco,
+    .texto-container-preto {
+        font-size: 18px;
+    }
+
+    .vetor {
+        width: 250px;
+    }
+
+    .container-branco :nth-last-child(2) {
+        order: 1;
+    }
 }
